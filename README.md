@@ -4,7 +4,7 @@
 
 # Explore Green Energy Stock
 
-##Using VBA to Explore The Financial Performance of Green Energy Stocks in 2017 and 2018
+
 
 
 ## Overview of Project
@@ -17,7 +17,7 @@ Using the provided  "Green_Stocks.xlm and challenge_starter_codes.vbs we execute
 ### Results
 Using the macros for clearing the dataset and running the analysis provide a great tool that many clients will like. The ability to give that function directly in the excel document will provide for ease of use and increase functionality to all users. The "refactor" code used in the exercise return 0.09375 second for 2018 and 0.09375 seconds for 2017. The ability to run a large dataset and provide the users with quantifiable numbers and present a visual aid to tell the story of the data is extremely valuable. For the year 2017 Green Stocks, as a sector delivered positive returns. In the dataset 11 out of 12 analyzed stocks produced positive returns and 9 out 12 stocks produced double digits returns for 2017.  Using our stock analysis, we saw the year 2018 reverse gains and only 2 out of 12 stocks produced positive returns.  
 
-###The Code
+
 The following is sample and excerpts of important code that was modified and recreated with the help of challenge_starter_codes.vbs, teaching assistances, and classmates. 
 
  '1a) Creating a variable, tickerIndex and setting it to 0
