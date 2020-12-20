@@ -4,7 +4,7 @@
 
 # Explore Green Energy Stock
 
-###Using VBA to Explore The Financial Performance of Green Energy Stocks in 2017 and 2018
+##Using VBA to Explore The Financial Performance of Green Energy Stocks in 2017 and 2018
 
 
 ## Overview of Project
@@ -20,13 +20,60 @@ Using the macros for clearing the dataset and running the analysis provide a gre
 ###The Code
 The following is sample and excerpts of important code that was modified and recreated with the help of challenge_starter_codes.vbs, teaching assistances, and classmates. 
 
- '1a) Creating a variable, tickerIndex and setting it to 0   For tickerIndex = 0 To 11
+ '1a) Creating a variable, tickerIndex and setting it to 0
+   For tickerIndex = 0 To 11
 
-  '1b) Creating three output arrays for tickerVolumes, tickerStartingPrices, and tickerEndingPrices    Dim tickerVolumes(12) As Long    Dim tickerStartingPrices(12) As Single    Dim tickerEndingPrices(12) As Single
+  '1b) Creating three output arrays for tickerVolumes, tickerStartingPrices, and tickerEndingPrices
+    Dim tickerVolumes(12) As Long
+    Dim tickerStartingPrices(12) As Single
+    Dim tickerEndingPrices(12) As Single
 
     ''2a) Create a for loop to initialize the tickerVolumes to zero. In addition to creating ticker Volume loop we are designing our pattern to utilized the mechanism of "For" loop and "Nest" loop to optimize or REFACTOR our code from the homework study. By nesting our loops the code is able to process one tickerIndex "stock ticker" via the same loop and analysis ticker name, total daily volume, and use tickerStartingPrices and tickerEndingPrices to produce precent returns. 
 
-    Worksheets(yearValue).Activate    For i = 0 To 11      tickerVolumes(i) = 0    Next i        ''2b) Loop over all the rows in the spreadsheet.      For i = 2 To RowCount                    '3a) Increase volume for current ticker                          If Cells(i, 1).Value = tickers(tickerIndex) Then                              tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value                            End If        '3b) Check if the current row is the first row with the selected tickerIndex.                                If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1) = tickers(tickerIndex) Then                tickerStartingPrices(tickerIndex) = Cells(i, 6).Value        End If                            '3c) check if the current row is the last row with the selected ticker         'If the next row’s ticker doesn’t match, increase the tickerIndex.            If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then                        tickerEndingPrices(tickerIndex) = Cells(i, 6).Value                    '3d Increase the tickerIndex.                            tickerIndex = tickerIndex + 1                    End If              Next i
+
+    Worksheets(yearValue).Activate
+
+    For i = 0 To 11
+
+      tickerVolumes(i) = 0
+
+    Next i
+    
+    ''2b) Loop over all the rows in the spreadsheet.
+
+      For i = 2 To RowCount
+      
+      
+        '3a) Increase volume for current ticker
+             
+             If Cells(i, 1).Value = tickers(tickerIndex) Then
+              
+                tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
+                
+            End If
+        '3b) Check if the current row is the first row with the selected tickerIndex.
+                
+                If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1) = tickers(tickerIndex) Then
+
+                tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
+
+        End If
+            
+        
+        '3c) check if the current row is the last row with the selected ticker
+         'If the next row’s ticker doesn’t match, increase the tickerIndex.
+            If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
+                        tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
+        
+
+            '3d Increase the tickerIndex.
+            
+                tickerIndex = tickerIndex + 1
+            
+        End If
+
+          
+    Next i
 
 
 
