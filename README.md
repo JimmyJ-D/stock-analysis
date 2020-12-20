@@ -2,7 +2,7 @@
 
 
 
-# Explore Green Energy Stock
+# Explore Green Energy Stocks
 
 
 
