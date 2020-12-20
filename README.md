@@ -2,7 +2,7 @@
 
 
 
-# Explore Green Energy Stocks
+# Exploring Energy Stocks for Green Returns
 
 
 
